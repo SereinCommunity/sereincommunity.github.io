@@ -1,0 +1,17 @@
+a.underline-links,
+.underline-links a {
+  background: linear-gradient(var(--ifm-link-color), var(--ifm-link-color));
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  background-position: right bottom;
+  transition: background-size 0.3s;
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+
+a.underline-links:hover,
+.underline-links a:hover {
+  text-decoration: none;
+  background-position: left bottom;
+  background-size: 100% 2px;
+}
