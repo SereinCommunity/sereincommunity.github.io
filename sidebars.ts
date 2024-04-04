@@ -9,7 +9,7 @@ const sidebars: SidebarsConfig = {
         type: 'doc',
         id: 'index',
       },
-      items: ['plugins', 'packages', 'matches'],
+      items: ['json-schemas', 'plugins', 'packages', 'matches', 'schedule'],
     },
   ],
 };

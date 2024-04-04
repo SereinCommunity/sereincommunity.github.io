@@ -54,18 +54,18 @@ const config: Config = {
   ],
 
   themeConfig: {
-    announcementBar: {
-      content: '🚧此文档尚未完工🚧',
-      textColor: 'var(--ifm-color-primary-contrast-foreground)',
-      backgroundColor: 'var(--ifm-background-surface-color)',
-      id: '20240331',
-    },
+    // announcementBar: {
+    //   content: '🚧此文档尚未完工🚧',
+    //   textColor: 'var(--ifm-color-primary-contrast-foreground)',
+    //   backgroundColor: 'var(--ifm-background-surface-color)',
+    //   id: '20240331',
+    // },
 
     image: 'logo.png',
 
     navbar: {
       hideOnScroll: true,
-      title: 'Serein',
+      title: 'Serein社区',
       logo: {
         alt: 'Logo',
         src: 'logo.png',
@@ -99,7 +99,7 @@ const config: Config = {
             {
               label: '仓库',
               to: 'https://github.com/SereinDev/Serein',
-            },
+            }
           ],
         },
         {
@@ -119,20 +119,22 @@ const config: Config = {
             },
           ],
         },
+        {
+          title: '更多',
+          items: [
+            {
+              href: 'https://eu.umami.is/share/3jbl7AQggLETZyoM/sereincommunity.github.io',
+              label: '网站统计',
+            },
+          ],
+        },
       ],
       copyright: 'Copyright © 2022 Zaitonn. All Rights Reserved.',
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: [
-        'batch',
-        'csharp',
-        'json',
-        'powershell',
-        'regex',
-        'typescript',
-      ],
+      additionalLanguages: ['json', 'typescript'],
     } satisfies Preset.ThemeConfig,
 
     metadata: [],
