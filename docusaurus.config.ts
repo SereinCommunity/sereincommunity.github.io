@@ -37,7 +37,7 @@ const config: Config = {
 
         blog: {
           path: 'resources/plugins',
-          routeBasePath: 'plugins',
+          routeBasePath: '/plugins',
           showReadingTime: false,
           blogSidebarCount: 'ALL',
           blogSidebarTitle: '所有插件',
@@ -99,7 +99,7 @@ const config: Config = {
             {
               label: '仓库',
               to: 'https://github.com/SereinDev/Serein',
-            }
+            },
           ],
         },
         {

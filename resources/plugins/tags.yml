@@ -1,0 +1,17 @@
+entertainment:
+  label: 娱乐
+
+development:
+  label: 开发
+
+tool:
+  label: 工具
+
+information:
+  label: 信息
+
+management:
+  label: 管理
+
+api:
+  label: API
