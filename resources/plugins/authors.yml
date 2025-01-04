@@ -1,9 +1,11 @@
 wait9yan:
     name: 9Yan
-    title: null
+    title: -
     image_url: https://avatars.githubusercontent.com/u/67789329?v=4
     url: https://github.com/wait9yan
     page: true
+    social:
+        github: wait9yan
 
 
 Zaitonn:
@@ -12,5 +14,7 @@ Zaitonn:
     image_url: https://avatars.githubusercontent.com/u/103164490?v=4
     url: https://github.com/Zaitonn
     page: true
+    social:
+        github: Zaitonn
 
 
