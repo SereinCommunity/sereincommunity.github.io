@@ -1,20 +1,20 @@
 wait9yan:
-    name: 9Yan
-    title: -
-    image_url: https://avatars.githubusercontent.com/u/67789329?v=4
-    url: https://github.com/wait9yan
+    name: "9Yan"
+    title: "-"
+    image_url: "https://avatars.githubusercontent.com/u/67789329?v=4"
+    url: "https://github.com/wait9yan"
     page: true
     social:
-        github: wait9yan
+        github: "wait9yan"
 
 
 Zaitonn:
-    name: Zt
-    title: 前程似锦。
-    image_url: https://avatars.githubusercontent.com/u/103164490?v=4
-    url: https://github.com/Zaitonn
+    name: "Zt"
+    title: "前程似锦。"
+    image_url: "https://avatars.githubusercontent.com/u/103164490?v=4"
+    url: "https://github.com/Zaitonn"
     page: true
     social:
-        github: Zaitonn
+        github: "Zaitonn"
 
 
