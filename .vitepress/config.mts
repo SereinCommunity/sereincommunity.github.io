@@ -7,7 +7,7 @@ const locales: Partial<DefaultTheme.Config> = {
   },
 
   lastUpdated: {
-    text: '最后更新于',
+    text: '此页最后更新于',
     formatOptions: {
       dateStyle: 'short',
       timeStyle: 'medium',
@@ -47,7 +47,7 @@ export default defineConfig({
         basePath: '/',
         scanStartPath: '/plugins',
         useFolderLinkFromIndexFile: true,
-        useTitleFromFileHeading: true,
+        useTitleFromFrontmatter: true,
         useFolderTitleFromIndexFile: true,
       },
     ]),

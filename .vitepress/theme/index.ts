@@ -5,8 +5,8 @@ import 'vitepress-plugin-back-to-top/dist/style.css';
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 import DefaultTheme from 'vitepress/theme';
 import { toRefs } from 'vue';
+import CustomLayout from '../components/CustomLayout.vue';
 import './backToTop.css';
-import CustomLayout from './CustomLayout.vue';
 import './style.css';
 
 export default {
