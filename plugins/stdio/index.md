@@ -52,7 +52,11 @@ title: 文件管理
 
 
 
-一个提供文件读写、目录创建删除等功能的前置插件
+::: warning
+
+由于*Serein*从2.0起已内置文件相关的函数，故此插件不再更新。
+
+:::
 
 :::tip
 你可以在[此处](https://learn.microsoft.com/zh-cn/dotnet/api/system.io?view=net-8.0)找到更详细的说明
