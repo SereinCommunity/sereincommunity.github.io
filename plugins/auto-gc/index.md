@@ -29,15 +29,15 @@ repo:
     v1.0.0:
       url: https://github.com/SereinCommunity/auto-gc/releases/tag/v1.0.0
       body: ''
-      downloads: 0
+      downloads: 2
       publishedAt: '2025-01-07T02:07:53Z'
       assets:
         - name: auto-gc_v1.0.0.zip
           size: 707
-          downloads: 0
+          downloads: 2
           url: >-
             https://github.com/SereinCommunity/auto-gc/releases/download/v1.0.0/auto-gc_v1.0.0.zip
-  downloads: 0
+  downloads: 2
 title: 自动垃圾回收
 
 ---
