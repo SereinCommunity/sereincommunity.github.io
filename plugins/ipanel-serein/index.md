@@ -34,15 +34,15 @@ repo:
     2.3.0:
       url: https://github.com/iPanelDev/iPanel-Serein/releases/tag/2.3.0
       body: ''
-      downloads: 59
+      downloads: 60
       publishedAt: '2023-11-26T02:14:39Z'
       assets:
         - name: iPanel-Serein.js
           size: 9229
-          downloads: 59
+          downloads: 60
           url: >-
             https://github.com/iPanelDev/iPanel-Serein/releases/download/2.3.0/iPanel-Serein.js
-  downloads: 59
+  downloads: 60
 title: iPanel
 
 ---
