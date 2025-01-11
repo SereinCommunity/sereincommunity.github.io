@@ -32,20 +32,20 @@ repo:
     v1.1:
       url: https://github.com/SereinCommunity/stdio/releases/tag/v1.1
       body: ''
-      downloads: 0
+      downloads: 2
       publishedAt: '2024-12-27T09:17:47Z'
       assets:
         - name: stdio.d.ts
           size: 9611
-          downloads: 0
+          downloads: 1
           url: >-
             https://github.com/SereinCommunity/stdio/releases/download/v1.1/stdio.d.ts
         - name: stdio.js
           size: 10644
-          downloads: 0
+          downloads: 1
           url: >-
             https://github.com/SereinCommunity/stdio/releases/download/v1.1/stdio.js
-  downloads: 0
+  downloads: 2
 title: 文件管理
 
 ---
