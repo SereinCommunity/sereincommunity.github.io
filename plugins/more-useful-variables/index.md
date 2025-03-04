@@ -31,15 +31,15 @@ repo:
       url: >-
         https://github.com/SereinCommunity/more-useful-variables/releases/tag/v1.0
       body: ''
-      downloads: 4
+      downloads: 5
       publishedAt: '2025-01-03T03:17:23Z'
       assets:
         - name: MoreUsefulVariables.js
           size: 3366
-          downloads: 4
+          downloads: 5
           url: >-
             https://github.com/SereinCommunity/more-useful-variables/releases/download/v1.0/MoreUsefulVariables.js
-  downloads: 4
+  downloads: 5
 title: 更多有用的变量
 
 ---
