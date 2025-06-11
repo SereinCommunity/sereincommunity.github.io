@@ -34,15 +34,15 @@ repo:
     v1.8:
       url: https://github.com/SereinCommunity/better-whitelist/releases/tag/v1.8
       body: ''
-      downloads: 15
+      downloads: 16
       publishedAt: '2025-01-04T03:18:25Z'
       assets:
         - name: BetterWhitelist.js
           size: 24083
-          downloads: 15
+          downloads: 16
           url: >-
             https://github.com/SereinCommunity/better-whitelist/releases/download/v1.8/BetterWhitelist.js
-  downloads: 15
+  downloads: 16
 title: 更好的白名单
 
 ---
