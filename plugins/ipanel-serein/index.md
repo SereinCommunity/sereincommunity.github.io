@@ -1,7 +1,10 @@
 ---
 id: ipanel-serein
 title: iPanel
+order: 4
+
 ---
+
 
 适用于 Serein 的实例插件
 

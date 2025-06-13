@@ -1,7 +1,10 @@
 ---
 id: stdio
 title: 文件管理
+order: 7
+
 ---
+
 
 ::: warning
 

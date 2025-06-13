@@ -1,7 +1,10 @@
 ---
 id: auto-gc
 title: 自动垃圾回收
+order: 3
+
 ---
+
 
 定时调用[`System.GC.Collect()`](https://learn.microsoft.com/zh-cn/dotnet/api/system.gc.collect?view=net-8.0)，减少内存占用
 

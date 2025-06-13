@@ -1,7 +1,10 @@
 ---
 id: more-useful-variables
 title: 更多有用的变量
+order: 6
+
 ---
+
 
 ## 变量列表
 
