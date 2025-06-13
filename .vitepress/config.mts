@@ -32,6 +32,9 @@ export default defineConfig({
   cleanUrls: true,
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
 
+  vite: { server: { port: 5100 } },
+  srcExclude: ['README.md'],
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -43,12 +46,14 @@ export default defineConfig({
     sidebar: generateSidebar([
       {
         rootGroupText: '插件',
-        resolvePath: '/',
+        resolvePath: '/plugins',
         basePath: '/',
         scanStartPath: '/plugins',
         useFolderLinkFromIndexFile: true,
         useTitleFromFrontmatter: true,
         useFolderTitleFromIndexFile: true,
+        sortMenusByFrontmatterDate: true,
+        sortMenusOrderByDescending: true,
       },
     ]),
 

@@ -1,28 +1,36 @@
 <script setup lang="ts">
 import { useData } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
+import { computed } from 'vue';
+// @ts-expect-error
+import { data } from '../../gallery.data.ts';
+import { PluginDetailedInfo } from '../libs/type.ts';
 import DownloadBar from './DownloadBar.vue';
 import PluginInfoBar from './PluginInfoBar.vue';
 
 const { Layout } = DefaultTheme;
+
+const frontmatter = useData().frontmatter;
+const plugin = computed<PluginDetailedInfo | undefined>(() => data[useData().frontmatter.value.id]);
+
 </script>
 
 <template>
   <Layout>
     <template #doc-before>
-      <div v-if="useData().frontmatter.value.id" class="vp-doc">
+      <div v-if="frontmatter.id" class="vp-doc">
         <h1>
-          {{ useData().frontmatter.value.title }}
-          <Badge v-text="useData().frontmatter.value.id" type="info" />
+          {{ frontmatter.title }}
+          <Badge v-text="frontmatter.id" type="info" />
         </h1>
-        <PluginInfoBar />
+        <PluginInfoBar :plugin="plugin" />
       </div>
     </template>
 
     <template #doc-footer-before>
-      <div v-if="useData().frontmatter.value.id" class="vp-doc">
+      <div v-if="frontmatter.id" class="vp-doc">
         <h2>下载</h2>
-        <DownloadBar />
+        <DownloadBar :plugin="plugin" />
       </div>
     </template>
   </Layout>

@@ -1,48 +1,42 @@
 <script setup lang="ts">
-import { useData } from 'vitepress';
-import { ref, watch } from 'vue';
 import { PluginDetailedInfo } from '../libs/type';
 
-const pluginInfo = ref(useData().frontmatter.value as PluginDetailedInfo);
-watch(
-  useData().frontmatter,
-  (value) => (pluginInfo.value = value as PluginDetailedInfo)
-);
+defineProps({
+  plugin: {
+    type: Object as () => PluginDetailedInfo | undefined,
+    required: true,
+  }
+})
 </script>
 
 <template>
-  <table v-if="pluginInfo?.id">
+  <table v-if="plugin?.id">
     <tbody>
       <tr>
         <td>描述</td>
         <td class="description">
-          {{ pluginInfo.description }}
+          {{ plugin.description }}
         </td>
       </tr>
 
       <tr>
         <td>版本</td>
         <td>
-          <code>{{ pluginInfo.version }}</code>
+          <code>{{ plugin.version }}</code>
         </td>
       </tr>
       <tr>
         <td>标签</td>
         <td>
-          <Badge
-            v-for="tag of pluginInfo.tags"
-            type="tip"
-            :text="
-              {
-                entertainment: '娱乐',
-                development: '开发',
-                tool: '工具',
-                information: '信息',
-                management: '管理',
-                api: 'API',
-              }[tag]
-            "
-          />
+          <Badge v-for="tag of plugin.tags" type="tip" :text="{
+            entertainment: '娱乐',
+            development: '开发',
+            tool: '工具',
+            information: '信息',
+            management: '管理',
+            api: 'API',
+          }[tag]
+            " />
         </td>
       </tr>
 
@@ -50,7 +44,7 @@ watch(
         <td>作者</td>
         <td>
           {{
-            pluginInfo.authors.map((author) => author.name).join(', ') || '-'
+            plugin.authors.map((author) => author.name).join(', ') || '-'
           }}
         </td>
       </tr>
@@ -58,34 +52,27 @@ watch(
       <tr>
         <td>仓库</td>
         <td>
-          <a :href="pluginInfo.repo.url" target="_blank">{{
-            `${pluginInfo.repo.owner}/${pluginInfo.repo.repo}`
+          <a :href="plugin.repo.url" target="_blank">{{
+            `${plugin.repo.owner}/${plugin.repo.repo}`
           }}</a>
 
-          <div v-if="pluginInfo.repo.license" class="license">
-            {{ pluginInfo.repo.license }}
+          <div v-if="plugin.repo.license" class="license">
+            许可证：{{ plugin.repo.license }}
           </div>
 
           <div class="updated-at">
-            (最后更新于
-            {{ new Date(pluginInfo.repo.updatedAt).toLocaleString() }})
+            (
+            最后更新于
+            {{ new Date(plugin.repo.updatedAt).toLocaleString() }}
+            )
           </div>
         </td>
       </tr>
 
       <tr>
-        <td>下载量</td>
+        <td>总下载量</td>
         <td>
-          {{ pluginInfo.repo.downloads }}
-        </td>
-      </tr>
-
-      <tr>
-        <td>适用版本</td>
-        <td>
-          <Badge v-for="v of pluginInfo.targetingSerein">
-            {{ v }}
-          </Badge>
+          {{ plugin.repo.downloads }}
         </td>
       </tr>
     </tbody>

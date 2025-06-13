@@ -1,50 +1,7 @@
 ---
 id: more-useful-variables
-name: 更多有用的变量
-version: '1.0'
-description: 提供一系列有用的命令变量
-tags:
-  - information
-targetingSerein:
-  - 1.3.4
-  - 1.3.5
-  - '2.0'
-dependencies: []
-authors: []
-type: js
-entryFile: ''
-repo:
-  owner: SereinCommunity
-  repo: more-useful-variables
-  branch: main
-  url: https://github.com/SereinCommunity/more-useful-variables
-  stars: 0
-  forks: 0
-  issues: 0
-  pullRequests: 0
-  createAt: '2024-03-22T10:44:14Z'
-  pushedAt: '2025-01-03T03:17:23Z'
-  updatedAt: '2025-01-03T03:16:18Z'
-  license: GNU General Public License v3.0
-  releases:
-    v1.0:
-      url: >-
-        https://github.com/SereinCommunity/more-useful-variables/releases/tag/v1.0
-      body: ''
-      downloads: 5
-      publishedAt: '2025-01-03T03:17:23Z'
-      assets:
-        - name: MoreUsefulVariables.js
-          size: 3366
-          downloads: 5
-          url: >-
-            https://github.com/SereinCommunity/more-useful-variables/releases/download/v1.0/MoreUsefulVariables.js
-  downloads: 5
 title: 更多有用的变量
-
 ---
-
-
 
 ## 变量列表
 
