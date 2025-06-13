@@ -1,5 +1,4 @@
 ---
 comment: false
+layout: PluginListPage
 ---
-
-# 插件列表
