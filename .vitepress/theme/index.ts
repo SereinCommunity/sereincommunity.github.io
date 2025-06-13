@@ -6,16 +6,20 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 import DefaultTheme from 'vitepress/theme';
 import { toRefs } from 'vue';
 import CustomLayout from '../components/CustomLayout.vue';
+import PluginListPage from '../components/PluginListPage.vue';
 import './backToTop.css';
 import './style.css';
 
 export default {
   extends: DefaultTheme,
+
   Layout: CustomLayout,
-  enhanceApp({ app, router, siteData }) {
-    // ...
+
+  enhanceApp({ app }) {
+    app.component('PluginListPage', PluginListPage);
     vitepressBackToTop({ threshold: 300 });
   },
+
   setup() {
     const { frontmatter } = toRefs(useData());
     const route = useRoute();

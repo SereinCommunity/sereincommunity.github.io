@@ -1,0 +1,9 @@
+{
+  "globs": ["**.md"],
+  "ignores": ["node_modules/**"],
+  "config": {
+    "no-inline-html": false,
+    "line-length": false,
+    "no-duplicate-heading": false
+  }
+}

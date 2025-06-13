@@ -11,7 +11,7 @@ import PluginInfoBar from './PluginInfoBar.vue';
 const { Layout } = DefaultTheme;
 
 const frontmatter = useData().frontmatter;
-const plugin = computed<PluginDetailedInfo | undefined>(() => data[useData().frontmatter.value.id]);
+const plugin = computed<PluginDetailedInfo | undefined>(() => data.all[useData().frontmatter.value.id]);
 
 </script>
 

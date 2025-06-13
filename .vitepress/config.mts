@@ -52,8 +52,7 @@ export default defineConfig({
         useFolderLinkFromIndexFile: true,
         useTitleFromFrontmatter: true,
         useFolderTitleFromIndexFile: true,
-        sortMenusByFrontmatterDate: true,
-        sortMenusOrderByDescending: true,
+        sortMenusByFrontmatterOrder: true,
       },
     ]),
 
