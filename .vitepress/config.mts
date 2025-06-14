@@ -1,5 +1,6 @@
 import { DefaultTheme, defineConfig } from 'vitepress';
 import { generateSidebar } from 'vitepress-sidebar';
+import { MermaidMarkdown, MermaidPlugin } from 'vitepress-plugin-mermaid';
 
 const locales: Partial<DefaultTheme.Config> = {
   outline: {
@@ -25,18 +26,35 @@ const locales: Partial<DefaultTheme.Config> = {
   darkModeSwitchTitle: '切换到深色模式',
 };
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'Serein 社区',
   description: 'Serein 社区',
   cleanUrls: true,
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
 
-  vite: { server: { port: 5100 } },
+  vite: {
+    server: { port: 5100 },
+    plugins: [MermaidPlugin()],
+    optimizeDeps: {
+      include: ['mermaid'],
+    },
+  },
   srcExclude: ['README.md'],
 
+  markdown: {
+    container: {
+      tipLabel: '提示',
+      warningLabel: '注意',
+      dangerLabel: '警告',
+      infoLabel: '信息',
+      detailsLabel: '详细信息',
+    },
+    config: (md) => md.use(MermaidMarkdown),
+  },
+
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    externalLinkIcon: true,
+
     nav: [
       { text: '插件', link: '/plugins/' },
       { text: '整合包', link: '/packages/' },
@@ -58,7 +76,7 @@ export default defineConfig({
 
     footer: {
       message: 'Built with VitePress',
-      copyright: 'Copyright © 2022 Zaitonn. All Rights Reserved.',
+      copyright: 'Copyright © 2025 SereinCommunity. All Rights Reserved.',
     },
 
     search: {

@@ -5,8 +5,8 @@ defineProps({
   plugin: {
     type: Object as () => PluginDetailedInfo | undefined,
     required: true,
-  }
-})
+  },
+});
 </script>
 
 <template>
@@ -28,24 +28,27 @@ defineProps({
       <tr>
         <td>标签</td>
         <td>
-          <Badge v-for="tag of plugin.tags" type="tip" :text="{
-            entertainment: '娱乐',
-            development: '开发',
-            tool: '工具',
-            information: '信息',
-            management: '管理',
-            api: 'API',
-          }[tag]
-            " />
+          <Badge
+            v-for="tag of plugin.tags"
+            type="tip"
+            :text="
+              {
+                entertainment: '娱乐',
+                development: '开发',
+                tool: '工具',
+                information: '信息',
+                management: '管理',
+                api: 'API',
+              }[tag]
+            "
+          />
         </td>
       </tr>
 
       <tr>
         <td>作者</td>
         <td>
-          {{
-            plugin.authors.map((author) => author.name).join(', ') || '-'
-          }}
+          {{ plugin.authors.map((author) => author.name).join(', ') || '-' }}
         </td>
       </tr>
 
@@ -61,8 +64,7 @@ defineProps({
           </div>
 
           <div class="updated-at">
-            (
-            最后更新于
+            ( 最后更新于
             {{ new Date(plugin.repo.updatedAt).toLocaleString() }}
             )
           </div>

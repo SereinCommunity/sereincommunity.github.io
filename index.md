@@ -5,19 +5,23 @@ layout: home
 hero:
   name: "Serein Community"
   text: "社区"
-  tagline: 你可以在这里发布或下载插件、匹配文件、整合包 
+  tagline: 你可以在这里发布或下载插件和整合包 
   image:
     src: /logo.png
     alt: Serein Community
-  actions:
-    - theme: brand
-      text: 💡 发布
-      link: /publish
-    - theme: alt
-      text: 🧩 插件
-      link: /plugins/
-    - theme: alt
-      text: 📦 整合包
-      link: /packages/
+features:
+  - icon: 🧩
+    title: 插件
+    details: 
+    link: /plugins
+    linkText: 浏览插件列表
+  - icon: 📦
+    title: 整合包
+    link: /packages
+    linkText: 浏览整合包列表
+  - icon: 💡
+    title: 发布
+    link: /publish
+    linkText: 发布你的作品
 ---
 

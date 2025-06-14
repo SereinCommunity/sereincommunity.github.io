@@ -18,7 +18,7 @@ const plugin = computed<PluginDetailedInfo | undefined>(() => data.all[useData()
 <template>
   <Layout>
     <template #doc-before>
-      <div v-if="frontmatter.id" class="vp-doc">
+      <div v-if="frontmatter.id" class="vp-doc external-link-icon-enabled">
         <h1>
           {{ frontmatter.title }}
           <Badge v-text="frontmatter.id" type="info" />
@@ -28,7 +28,7 @@ const plugin = computed<PluginDetailedInfo | undefined>(() => data.all[useData()
     </template>
 
     <template #doc-footer-before>
-      <div v-if="frontmatter.id" class="vp-doc">
+      <div v-if="frontmatter.id" class="vp-doc external-link-icon-enabled">
         <h2>下载</h2>
         <DownloadBar :plugin="plugin" />
       </div>

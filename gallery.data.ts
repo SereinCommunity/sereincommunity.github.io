@@ -14,6 +14,6 @@ export default {
 
 function read(fileName: string) {
   return JSON.parse(
-    readFileSync(path.join('public', 'gallery', 'plugins', fileName), 'utf-8')
+    readFileSync(path.join('public', 'indexes', 'plugins', fileName), 'utf-8')
   ).data;
 }

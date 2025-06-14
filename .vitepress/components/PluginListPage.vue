@@ -5,6 +5,17 @@ import { computed, ref } from 'vue';
 import { PluginDetailedInfo } from '../libs/type.ts';
 import { useRouter } from 'vitepress';
 
+const tags = {
+  entertainment: '娱乐',
+  development: '开发',
+  tool: '工具',
+  information: '信息',
+  management: '管理',
+  api: 'API',
+};
+
+const selectTags = ref<string[]>([]);
+
 const router = useRouter();
 const plugins = Object.entries(
   data.all as { [key: string]: PluginDetailedInfo }
@@ -12,14 +23,17 @@ const plugins = Object.entries(
 
 const search = ref('');
 const filteredPlugins = computed(() => {
-  if (!search.value) return plugins;
+  if (!search.value && !selectTags.value.length) return plugins;
 
   const searchLower = search.value.toLowerCase();
-  return plugins.filter(
-    ([id, plugin]) =>
-      id.toLowerCase().includes(searchLower) ||
-      plugin.name.toLowerCase().includes(searchLower) ||
-      plugin.description.toLowerCase().includes(searchLower)
+  return plugins.filter(([id, plugin]) =>
+    search.value
+      ? id.toLowerCase().includes(searchLower) ||
+        plugin.name.toLowerCase().includes(searchLower) ||
+        plugin.description.toLowerCase().includes(searchLower)
+      : false || selectTags.value.length
+      ? plugin.tags.some((tag) => selectTags.value.includes(tag))
+      : false
   );
 });
 </script>
@@ -40,9 +54,26 @@ const filteredPlugins = computed(() => {
       />
     </div>
 
+    <div class="tag-filter">
+      <Badge
+        v-for="tag in Object.keys(tags)"
+        :key="tag"
+        :type="selectTags.includes(tag) ? 'tip' : 'info'"
+        :text="tags[tag]"
+        :class="{ selected: selectTags.includes(tag) }"
+        @click="
+          selectTags.includes(tag)
+            ? selectTags.splice(selectTags.indexOf(tag), 1)
+            : selectTags.push(tag)
+        "
+      />
+    </div>
+
     <div class="plugin-count">
-      当前共{{ plugins.length }}个插件
-      <span v-if="search">，搜索结果：{{ filteredPlugins.length }}个</span>
+      共 {{ plugins.length }} 个插件
+      <span v-if="search || selectTags.length">
+        · 搜索结果：{{ filteredPlugins.length }} 个
+      </span>
     </div>
 
     <div class="plugin-list">
@@ -102,7 +133,6 @@ h1 {
   border-radius: 8px;
   border-color: transparent;
   background: var(--vp-c-bg-alt);
-  cursor: pointer;
   outline: none;
   transition: border-color 0.25s;
 }
@@ -111,9 +141,33 @@ h1 {
   border-color: var(--vp-c-brand-1);
 }
 
+#search-box:hover:not(:focus) {
+  cursor: pointer;
+}
+
 .search-box-container {
   margin: 20px 0;
 }
+
+.tag-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tag-filter > * {
+  margin: 10px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  transition: opacity 0.25s;
+}
+
+.tag-filter > *:hover {
+  opacity: 0.8;
+}
+
 .plugin-count {
   width: 100%;
   text-align: center;
@@ -123,7 +177,7 @@ h1 {
 
 .plugin-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin: 20px 5px;
 }
@@ -135,7 +189,6 @@ h1 {
   border-color: var(--vp-c-gray-3);
   transition: border-color 0.25s;
   cursor: pointer;
-
   display: flex;
   flex-direction: column;
   min-height: 180px;
@@ -156,5 +209,11 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .plugin-list {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
