@@ -1,7 +1,7 @@
 ---
 id: ipanel-serein
 title: iPanel
-order: 4
+order: 6
 
 ---
 
