@@ -1,7 +1,7 @@
 ---
 id: advanced-auth-gate
 title: 更好的API验证方式
-order: 4
+order: 1
 
 ---
 
