@@ -1,7 +1,7 @@
 ---
 id: max-line-count-editor
 title: 控制台最大行数修改器
-order: 5
+order: 6
 
 ---
 

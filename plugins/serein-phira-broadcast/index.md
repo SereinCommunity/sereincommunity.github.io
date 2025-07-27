@@ -1,7 +1,7 @@
 ---
 id: serein-phira-broadcast
 title: Phira多人游戏状态群聊通知
-order: 4
+order: 5
 
 ---
 

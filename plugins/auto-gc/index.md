@@ -1,7 +1,7 @@
 ---
 id: auto-gc
 title: 自动垃圾回收
-order: 3
+order: 4
 
 ---
 

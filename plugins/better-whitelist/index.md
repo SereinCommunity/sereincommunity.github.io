@@ -1,7 +1,7 @@
 ---
 id: better-whitelist
 title: 更好的白名单
-order: 2
+order: 3
 
 ---
 
