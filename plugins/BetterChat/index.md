@@ -108,11 +108,11 @@ alt="language">
 
 <div>
     <div>
-        <a href="https://sereindev.github.io/">
-            <img src="serein.png" width="120" alt="logo">
+        <a href="https://sereindev.github.io/" target="_blank">
+            <img src="./serein.png" width="120" alt="logo">
         </a>
-        <a href="https://wiki.infinf.info/">
-            <img src="inf-logo-x135.png" alt="logo">
+        <a href="https://wiki.infinf.info/" target="_blank">
+            <img src="./inf-logo-x135.png" alt="logo">
         </a>
     </div>
 </div>
